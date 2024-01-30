@@ -52,6 +52,11 @@ on:
 permissions:
   contents: read
 
+  #env: 
+    #NAME: 
+- name: print name
+  run: echo "hello $NAME"
+
 jobs:
   terraform:
     name: 'Terraform'
