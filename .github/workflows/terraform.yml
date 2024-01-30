@@ -54,8 +54,6 @@ permissions:
 
   #env: 
     #NAME: 
-- name: print name
-  run: echo "hello $NAME"
 
 jobs:
   terraform:
@@ -69,6 +67,8 @@ jobs:
         shell: bash
 
     steps:
+     - name: print name
+       run: echo "hello $NAME"
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v3
